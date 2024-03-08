@@ -15,40 +15,42 @@ const foto = Photo.src
 
 <Layout title="Porfolio de Ariel. Desarollador y Programador Full-Stack"
 description='Desarollo aplicaciones accesibles y eficientes'>
-	<main class="px-4">
+	<main class="px-4 ">
         <SectionContainer id="contacto" class="py-24 pb-16 " >
            
-                
-                <img
-                class=" w-20 my-8 rounded-none shadow-md shadow-zinc-950 order-2" 
-                src={foto}
-                alt="ariel retrato"
-              />
-    
-                <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-8 bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent order-1">
-                    Hey, soy Ariel.
-                </h1>
+                <div class="flex gap-4 items-end">
+
+                  <img
+                  class="w-1/6 my-8 rounded-none shadow-md shadow-zinc-950 order-1" 
+                  src='https://avatars.githubusercontent.com/u/82770975?v=4'
+                  alt="ariel retrato"
+                />
+      
+                  <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-8 bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent order-2">
+                      Hey, soy Ariel.
+                  </h1>
+                </div>
            
 
-            <h2 class="text-2xl  text-balance text-slate-300 ">
+            <h2 class="text-xl md:text-2xl lg:text-4xl text-balance text-slate-300 ">
                 Desarrollador <strong class="bg-gradient-to-r from-amber-200 to-yellow-600 bg-clip-text text-transparent ">Full Stack</strong>. De Valencia, España. Creo herramientas eficientes y accesibles.
             </h2>
 
             <nav class="flex flex-wrap space-x-4 text-xs mt-6 "> 
                 <Social  href="https://www.linkedin.com/in/arielnh/">
-                    <LinkedIn class="size-6" alt="Linkedin"/>
+                    <LinkedIn class="size-4 " alt="Linkedin"/>
                     Linkedin
                 </Social>
                
                 <Social href="https://github.com/arielnh"
                 >
-                <GitHub class="size-6" alt="GitHub"/>
+                <GitHub class="size-4" alt="GitHub"/>
                 GitHub
                 </Social >
 
                 <Social href="mailto:legalnh@outlook.es" 
                 >
-                <Mail class="size-6" alt="Correo"/>
+                <Mail class="size-4" alt="Correo"/>
                 legalnh@outlook.es
                     
                 </Social>
