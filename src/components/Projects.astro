@@ -1,0 +1,74 @@
+---
+
+import Portada from "../Images/portada.webp"
+
+const TAGS = {
+    REACT: {
+      name: "React",
+      class: "",
+      
+    },
+
+    MATERIALUI: {
+      name: "Material UI",
+      class: "",
+      
+    },
+
+    Zustand:{
+      name: "Zustand",
+      class: "",
+    },
+
+    TS:{
+      name: "TypeScript",
+      class: "",
+    },
+  }
+  const PROJECTS = [
+    {
+      title: "JS Quiz - test sobre JavaScript",
+      description:
+        "Hecho con React y Material UI. Optimizado para móvil y con persistencia de datos. Una serie de test para evaluar tus conocimientos de JavaScript.",
+      link: "https://jstipotest.vercel.app/",
+      github: "https://github.com/arielnh/quiz",
+      image: Portada.src,
+      tags: [TAGS.REACT, TAGS.MATERIALUI, TAGS.TS, TAGS.Zustand],
+    },
+  ]
+  ---
+  
+  
+{
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+    <article>
+  <div class="max-w-[700px] rounded  shadow-lg">
+  <img class="w-full" src={image} alt="Foto del proyecto">
+  <div class="px-6 py-4">
+    <div class="font-bold text-xl mb-2 bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent">{title}</div>
+    <p class="text-neutral-300 text-base text-pretty">
+      {description}
+    </p>
+  </div>
+  <div class="px-6 pt-4 pb-2">
+    
+    <ul class="flex gap-x-2 flex-row mb-2">
+      <a  target="_blank" href={link}  class="
+    ring-2 ring-amber-100/60 border-gray-300 rounded-nose bg-[#364d61]/40 shadow-md shadow-zinc-900 transition duration-0 hover:ring-amber-100 hover:scale-110 flex gap-x-2 -center py-1 px-2 text-neutral-300 mr-4" >Visitar el sitio</a>
+
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-none text-xs ${tag.class} py-1 px-2 `}
+              >
+                
+                #{tag.name}
+              </span>
+            </li>
+            ))}
+        </ul>
+  </div>
+</div>
+    </article>
+    ))
+}

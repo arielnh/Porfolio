@@ -1,0 +1,86 @@
+---
+import About from '../components/About.astro';
+import GitHub from '../icons/GitHub.astro';
+import Layout from '../layouts/Layout.astro';
+import LinkedIn from '../icons/LinkedIn.astro';
+import Mail from '../icons/Mail.astro';
+import Photo from '../Images/ariel.webp';
+import Projects from '../components/Projects.astro';
+import SectionContainer from '../components/SecctionContainer.astro';
+import Social from '../components/Social.astro';
+import Experience from '../components/Experience.astro';
+
+---
+
+<Layout title="Porfolio de Ariel. Desarollador y Programador Full-Stack"
+description='Desarollo aplicaciones accesibles y eficientes'>
+	<main class="px-4">
+        <SectionContainer id="contacto" class="py-24 pb-16 " >
+           
+                
+                <img
+                class=" w-20 my-8 rounded-none shadow-md shadow-zinc-950 order-2" 
+                src={Photo.src}
+                alt="ariel retrato"
+              />
+    
+                <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold pb-6 lg:pb-8 bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent order-1">
+                    Hey, soy Ariel.
+                </h1>
+           
+
+            <h2 class="text-2xl  text-balance text-slate-300 ">
+                Desarrollador <strong class="bg-gradient-to-r from-amber-200 to-yellow-600 bg-clip-text text-transparent ">Full Stack</strong>. De Valencia, España. Creo herramientas eficientes y accesibles.
+            </h2>
+
+            <nav class="flex flex-wrap space-x-4 text-xs mt-6 "> 
+                <Social  href="https://www.linkedin.com/in/arielnh/">
+                    <LinkedIn class="size-6" alt="Linkedin"/>
+                    Linkedin
+                </Social>
+               
+                <Social href="https://github.com/arielnh"
+                >
+                <GitHub class="size-6" alt="GitHub"/>
+                GitHub
+                </Social >
+
+                <Social href="mailto:legalnh@outlook.es" 
+                >
+                <Mail class="size-6" alt="Correo"/>
+                legalnh@outlook.es
+                    
+                </Social>
+            </nav>
+        </SectionContainer>
+
+        <SectionContainer id="proyectos" class="py-16 pb-16">
+            <h2 class="text-xl md:text-4xl lg:text-3xl font-bold pb-6 lg:pb-12 bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent">
+                Mis proyectos.
+                </h2>
+            <Projects />
+        </SectionContainer>
+
+        <SectionContainer id="experiencia" class="py-16 pb-16">
+            <h2
+              class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-white/80"
+            >
+             
+              Experiencia
+            </h2>
+           <Experience/>
+          </SectionContainer>
+
+        <SectionContainer id="about" class="py-16 pb-16">
+            <h2
+              class="text-xl md:text-4xl lg:text-3xl font-bold mb-6 flex gap-x-3 items-center bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent"
+            >
+             
+              Sobre mí
+            </h2>
+            <About/>
+          </SectionContainer>
+
+    </main>
+</Layout>
+
