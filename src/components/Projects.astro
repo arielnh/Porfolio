@@ -43,12 +43,12 @@ const TAGS = {
   <div class="max-w-[700px] rounded  shadow-lg">
   <img class="w-full" src={image} alt="Foto del proyecto">
   <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2 bg-gradient-to-r from-slate-200 to-slate-600 bg-clip-text text-transparent">{title}</div>
+    <div class="font-bold text-xl mb-2 bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent">{title}</div>
     <p class="text-neutral-300 text-base text-pretty">
       {description}
     </p>
   </div>
-  <div class="px-6 pt-4 pb-2">
+  <div class="p-4">
     
     <ul class="flex gap-2 flex-row mb-2">
       
@@ -63,7 +63,7 @@ const TAGS = {
           </li>
           ))}
           </ul>
-          <a  target="_blank" href={link}  class=" ring-2 ring-amber-100/60 border-gray-300 rounded-none bg-[#364d61]/40 shadow-md shadow-zinc-900 transition duration-0 hover:ring-amber-100 hover:scale-110 flex gap-x-2 -center py-1 px-2 text-neutral-300 mr-4 max-w-28">Visitar el sitio</a>
+          <a  target="_blank" href={link}  class=" ring-2 ring-amber-100/60 border-gray-300 rounded-none bg-[#364d61]/40 shadow-md shadow-zinc-900 transition duration-0 hover:ring-amber-100 hover:scale-110 flex text-center py-1 px-2 text-neutral-300 mr-4 max-w-28 text-xs md:text-sm">Visitar el sitio</a>
           </div>
 </div>
     </article>
