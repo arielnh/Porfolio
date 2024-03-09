@@ -8,7 +8,7 @@ const TAGS = {
     },
 
     MATERIALUI: {
-      name: "Material UI",
+      name: "Material-UI",
       class: "",
       
     },
@@ -42,7 +42,7 @@ const TAGS = {
     <article>
   <div class="max-w-[700px] rounded  shadow-lg">
   <img class="w-full" src={image} alt="Foto del proyecto">
-  <div class="px-6 py-4">
+  <div class="p-4">
     <div class="font-bold text-xl mb-2 bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent">{title}</div>
     <p class="text-neutral-300 text-base text-pretty">
       {description}
@@ -50,22 +50,20 @@ const TAGS = {
   </div>
   <div class="p-4">
     
-    <ul class="flex gap-2 flex-row mb-2">
+    <ul class="flex flex-row mb-4">
       
       {tags.map((tag) => (
         <li>
           <span
-          class={`flex sm:ga-2 rounded-none text-xs ${tag.class} py-1 px-2 `}
-          >
-          
+          class={`flex sm:ga-2 rounded-none text-xs ${tag.class} p-1 `}>
           #{tag.name}
           </span>
           </li>
           ))}
-          </ul>
-          <a  target="_blank" href={link}  class=" ring-2 ring-amber-100/60 border-gray-300 rounded-none bg-[#364d61]/40 shadow-md shadow-zinc-900 transition duration-0 hover:ring-amber-100 hover:scale-110 flex text-center py-1 px-2 text-neutral-300 mr-4 max-w-28 text-xs md:text-sm">Visitar el sitio</a>
+    </ul>
+          <a  target="_blank" href={link}  class="p-2 mx-2 max-w-fit ring-2 ring-amber-100/60 border-gray-300 rounded-none bg-[#364d61]/40 shadow-md shadow-zinc-900 transition duration-0 hover:ring-amber-100 hover:scale-110 flex text-center text-neutral-300 text-xs md:text-sm">Visitar el sitio</a>
           </div>
-</div>
+  </div>
     </article>
     ))
 }
