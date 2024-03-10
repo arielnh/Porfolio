@@ -1,12 +1,11 @@
 ---
-
 interface Props {
-  title: string
-  description: string
-  date: string
+  title: string;
+  description: string;
+  date: string;
 }
 
-const { title, description, date } = Astro.props
+const { title, description, date } = Astro.props;
 ---
 
 <time
@@ -19,4 +18,3 @@ const { title, description, date } = Astro.props
 <p class="mb-4 text-base font-normal text-neutral-300 text-pretty">
   {description}
 </p>
-

@@ -1,69 +1,70 @@
 ---
-
 const TAGS = {
-    REACT: {
-      name: "React",
-      class: "",
-      
-    },
+  REACT: {
+    name: "React",
+    class: "",
+  },
 
-    MATERIALUI: {
-      name: "Material-UI",
-      class: "",
-      
-    },
+  MATERIALUI: {
+    name: "Material-UI",
+    class: "",
+  },
 
-    Zustand:{
-      name: "Zustand",
-      class: "",
-    },
+  Zustand: {
+    name: "Zustand",
+    class: "",
+  },
 
-    TS:{
-      name: "TypeScript",
-      class: "",
-    },
-  }
-  const PROJECTS = [
-    {
-      title: "JS Quiz - test sobre JavaScript",
-      description:
-        "Hecho con React y Material UI. Optimizado para móvil y con persistencia de datos. Una serie de test para evaluar tus conocimientos de JavaScript.",
-      link: "https://jstipotest.vercel.app/",
-      github: "https://github.com/arielnh/quiz",
-      image: "https://github.com/arielnh/Quiz/raw/main/repoportada.jpg",
-      tags: [TAGS.REACT, TAGS.MATERIALUI, TAGS.TS, TAGS.Zustand],
-    },
-  ]
-  ---
-  
-  
+  TS: {
+    name: "TypeScript",
+    class: "",
+  },
+};
+const PROJECTS = [
+  {
+    title: "JS Quiz - test sobre JavaScript",
+    description:
+      "Hecho con React y Material UI. Optimizado para móvil y con persistencia de datos. Una serie de test para evaluar tus conocimientos de JavaScript.",
+    link: "https://jstipotest.vercel.app/",
+    github: "https://github.com/arielnh/quiz",
+    image: "https://github.com/arielnh/Quiz/raw/main/repoportada.jpg",
+    tags: [TAGS.REACT, TAGS.MATERIALUI, TAGS.TS, TAGS.Zustand],
+  },
+];
+---
+
 {
-    PROJECTS.map(({ image, title, description, tags, link }) => (
+  PROJECTS.map(({ image, title, description, tags, link }) => (
     <article>
-  <div class="max-w-[700px] rounded-none shadow-md shadow-zinc-950">
-  <img class="w-full" src={image} alt="Foto del proyecto">
-  <div class="p-4">
-    <div class="font-bold text-xl mb-2 bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent">{title}</div>
-    <p class="text-neutral-300 text-base text-pretty">
-      {description}
-    </p>
-  </div>
-  <div class="p-4">
-    
-    <ul class="flex flex-row mb-4">
-      
-      {tags.map((tag) => (
-        <li>
-          <span
-          class={`flex sm:ga-2 text-slate-300 rounded-none text-xs ${tag.class} p-1 `}>
-          #{tag.name}
-          </span>
-          </li>
-          ))}
-    </ul>
-          <a  target="_blank" href={link}  class="p-2 mx-2 max-w-fit ring-2 ring-amber-100/60 border-gray-300 rounded-none bg-[#364d61]/40 shadow-lg shadow-zinc-900 transition duration-0 hover:ring-amber-100 hover:scale-110 flex text-center text-neutral-300 text-xs md:text-sm ">Visitar el sitio</a>
+      <div class="max-w-[700px] rounded-none shadow-md shadow-zinc-950">
+        <img class="w-full" src={image} alt="Foto del proyecto" />
+        <div class="p-4">
+          <div class="font-bold text-xl mb-2 bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent">
+            {title}
           </div>
-  </div>
+          <p class="text-neutral-300 text-base text-pretty">{description}</p>
+        </div>
+        <div class="p-4">
+          <ul class="flex flex-row mb-4">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex sm:ga-2 text-slate-300 rounded-none text-xs ${tag.class} p-1 `}
+                >
+                  #{tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <a
+            target="_blank"
+            href={link}
+            class="p-2 mx-2 max-w-fit ring-2 ring-amber-100/60 border-gray-300 rounded-none bg-[#364d61]/40 shadow-lg shadow-zinc-900 transition duration-0 hover:ring-amber-100 hover:scale-110 flex text-center text-neutral-300 text-xs md:text-sm "
+          >
+            Visitar el sitio
+          </a>
+        </div>
+      </div>
     </article>
-    ))
+  ))
 }
